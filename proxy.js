@@ -1,0 +1,25 @@
+const unirest = require('unirest');
+
+unirest.get('https://www.dsw.com/en/us/')
+    .headers({
+        //'Accept': 'application/json',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 YaBrowser/19.6.1.153 Yowser/2.5 Safari/537.36',
+        'authority': 'www.dsw.com',
+        'method': 'GET',
+        'path': '/en/us/',
+        'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+        'cache-control': 'no-cache',
+        'pragma': 'no-cache',
+        'referer': 'https://www.yandex.ru/clck/jsredir?from=yandex.ru;suggest;browser&text=',
+        'upgrade-insecure-requests': '1',
+        'cookie': 's_ecid=MCMID%7C02954932087267267940469817362897244455; BVBRANDID=4d8d5e58-0223-450d-8c43-51a82fda0dc5; RES_TRACKINGID=110850127724634; ResonanceSegment=1; _group=Group A; _scid=6bf4e243-476b-48fa-9964-b374b885bd53; _gcl_au=1.1.522701881.1560317554; _mibhv=anon-1560317554038-3510355158_6541; _ga=GA1.2.164903861.1560317552; check=true; AMCVS_A8683BC75245AF560A490D4D%40AdobeOrg=1; locale=en_US; pushSite=DSW; TIER=GUEST; BVImplmain_site=19143; testVersion=versionA; s_cc=true; __utmc=253152284; IR_gbd=dsw.com; _fbp=fb.1.1561002740781.1021918282; _abck=C7E6E9A678F568B89A95D63BB513B129~0~YAAQnpkQAgvkx0VrAQAAFSIEfQKtv+tH/tSbHe4k9niM6fwxYbqfH/+PtnDcHLMi2FMSc5SGo8IZULHzdwdLKTnHHIwQcOZl/NjLf3j1yXavSd0Q0933DVYBjFaisL9BCK6fRrJKwTl2fOEeAFWnEMwWB6JXJiJHlt78z7VIoIfgfyvteNwm5i3DJZWsHtlk7249tWgUjUEhurfbtgVICjxkGwQZy5ZYj3Igyxoi5RLiAQmvGJJXzCBeQKWwY8o/L+X0NT4OGQVPQcT1hfPL0TAn6pZcBvWXGnGg0lkctoOCQGC/i8s=~-1~-1~-1; _sctr=1|1561395600000; s_gttc_c=1561438302837; MOUS=1; cto_lwid=7e4984c8-97b2-404c-8139-d9d8b7e8f92a; s_countmerchsearch=6; s_stackmerchsearch=%5B%5B%27current%2520snow%27%2C%271561170585019%27%5D%2C%5B%27alex%2520mack%27%2C%271561436976197%27%5D%2C%5B%27shoes%27%2C%271561438254419%27%5D%2C%5B%27transit%27%2C%271561697581198%27%5D%5D; tfc-s=%7B%22v%22%3A%22tfc-fitrec-product%3D49%22%7D; tfc-l=%7B%22u%22%3A%7B%22v%22%3A%22V6%7Cunk_aad35c4e-59ab-48f1-b549-5c6df3277273!1623216865%7C8cspuhsqp9o1m361u7t1s063k0!1623216865%22%2C%22e%22%3A1623216864%7D%2C%22s%22%3A%7B%22v%22%3A%22session.params%3D%257C1623216865%22%2C%22e%22%3A1623216865%7D%2C%22k%22%3A%7B%22v%22%3A%228cspuhsqp9o1m361u7t1s063k0%22%2C%22e%22%3A1623216864%7D%2C%22a%22%3A%7B%22v%22%3A%2281653174-2428-4717-96a2-0f7f70d1993c%22%2C%22e%22%3A1561784886%7D%7D; _gid=GA1.2.436059037.1562148753; s_sq=%5B%5BB%5D%5D; ak_bmsc=F35C9B69FC0292FC0D66D2BBB2D0970E172F91AF1B020000E6AA1D5D48BF8F3D~plLM9WX/xmsitj7g5ymErbtcjbcxxBJfvbVGTLKZaFsGb0WFv0v6sv+ZQwkqknIjIBuCcrWNK/adKhw6qqICnaDC/szWdowYQRfdjNhgrKt0Zu/ZkAZNrkUgdlzcS4VDkRi6ISdB9twkNogxiPOVFOsgWoG5YeDv+FEBcVLcs34TOArPKzDdNfIS3fWQUKM5/W55DhCscQ/4RJmvH1HBnzewSkRpATC78p8ZP2slD/YOQ=; bm_sz=979EB16B625EE411A44B4484C9B19490~YAAQr5EvF9FeH69rAQAA7pTjuwRT+EG74TnclP7dP1xuA+RdHmisW2rtWwFD0mqU8Kg6o4ffCqqms1qpLWUlhVCA2ktRAWG6/RdRVjSmcrj33IYvl8ycNwMM5gvwxTB2LyUK475I8qDuDSja/C7jh783xdJSKJiIwFr3q8qFFlyk1PFkdclNM0t8BP6T; AMCV_A8683BC75245AF560A490D4D%40AdobeOrg=-894706358%7CMCIDTS%7C18081%7CMCMID%7C02954932087267267940469817362897244455%7CMCAAMLH-1562302332%7C7%7CMCAAMB-1562830189%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1562232589s%7CNONE%7CMCAID%7CNONE%7CvVersion%7C2.3.0; bm_mi=03D7A103680F8195C3EC872786C0827B~gsBenOqwz8O3RMiwATEIGJP3N8fKmFDRDHLE718IW7qWlN7o+cSC3GI1Oqs0b0eQJhLdk5DMCkQsop4RdOK2eGUal5Vn/SUe9NBWLvyGp6Fux88HWE13TD0s8zP4i8h//FK7kHEE325VBrSBUbdxikPjmaP/OrFxiINcvfIS49nQvoVHxNqZLpj36Tvun/gA8khdgVI5sV4D7kZoBZHeKA==; _gat_vs=1; JSESSIONID=ov5k6zrPpEfcdReBg5vqiVra.ATGPS025.PROD1A; _dynSessConf=-8593013724735946657; BVBRANDSID=d43dbc92-4ba5-44c3-8dad-93f2358e5b5d; mbox=PC#cbfbbce919104970a3d0dcd01b154bba.17_127#1625474822|session#411b11c8f6bf40939b1505a6daf3503b#1562231882; mboxEdgeCluster=17; utag_main=v_id:016b4a2c62ae0007cd8ee6f33e8e0508e001a08600bd0$_sn:14$_ss:1$_st:1562231822476$ses_id:1562230022476%3Bexp-session$_pn:1%3Bexp-session; s_lv=1562230022646; s_lv_s=Less%20than%201%20day; RES_SESSIONID=387461786510927; __utma=253152284.164903861.1560317552.1562225389.1562230023.14; __utmz=253152284.1562230023.14.9.utmcsr=yandex|utmccn=(organic)|utmcmd=organic; __utmt=1; __utmb=253152284.1.10.1562230023; IRMS_la4837=1562230023703; _sctr=1|1562173200000; bm_sv=2B2E33C81A5818E911DB54B2BC4BC4A3~nNAc3Zggc9hItH9EHdr95UFGmLUcm6xrCGKMWqbWThdSHWM/J60jbw+chqGQvII5b+uc06eRzvjr1o5xVEjLwXGnrSF9WVDCuoa/lpNuX+f/gevHr4SxsOmWh3kQsN+sEcBuMCTpCg/QznSQug9EMw==; smtrrmkr=636978268334202108%5E88bd007d-d38c-e911-818d-94a5bc967467%5Eea5aee4d-389e-e911-818e-b7b56d661a18%5E0%5E198.16.78.43',
+    })
+    .proxy('http://142.93.153.198:8080')
+    .end(function (response) {
+        console.log(response);
+        console.log(response.body);
+        console.log(response.code);
+        console.log(response.code === 200 ? "Success!" : "You don't have permissions");
+    });
